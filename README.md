@@ -1,6 +1,6 @@
 # WordApp
 This is a WordApp that allows you to save words to Google Spreadsheets.
-Run "pnpm run dev" in your PowerShell under /WordApp
+Run "pnpm run dev" in your PowerShell under /WordApp.
 
 And replace API_KEY = "ReplaceYourAPI"; with your API in /src/WordApp.
 
