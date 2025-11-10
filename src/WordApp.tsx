@@ -72,7 +72,6 @@ function WordApp({
     setOptions(choices);
   }, [data]);
 
-  // data更新時に最初の問題を作る
   useEffect(() => {
     if (data.length > 0) {
       makeQuestion();
@@ -140,5 +139,6 @@ function WordApp({
 }
 
 export default WordApp;
+
 
 
