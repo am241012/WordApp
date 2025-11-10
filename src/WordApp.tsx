@@ -50,7 +50,6 @@ function WordApp({
 
       let words: WordData[] = values.slice(1) as WordData[];
 
-      // categoryId でフィルタ（all の場合はそのまま）
       if (categoryId !== "all") {
         words = words.filter((word) => Number(word[0]) === categoryId);
       }
@@ -64,16 +63,13 @@ function WordApp({
   // 問題作成
   const makeQuestion = useCallback(() => {
     if (data.length < 4) return;
-
-    // 配列をコピーしてシャッフル
     const pool = [...data].sort(() => Math.random() - 0.5);
-
     const correct = pool[0];
     const others = pool.slice(1, 4);
     const choices = [correct, ...others].sort(() => Math.random() - 0.5);
 
     setQuestion(correct);
-    setOptions(choices); // ←新しい配列で更新することで増殖防止
+    setOptions(choices);
   }, [data]);
 
   // data更新時に最初の問題を作る
@@ -144,4 +140,5 @@ function WordApp({
 }
 
 export default WordApp;
+
 
