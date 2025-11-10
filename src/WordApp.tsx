@@ -37,7 +37,7 @@ function WordApp({
   const [options, setOptions] = useState<WordData[]>([]);
 
   const SHEET_ID = "1EMKeKmGgCtzSO7v1CtfXAD6cop0mM3XHHN-VMVLVTXw";
-  const API_KEY = "ReplaceYourAPI";
+  const API_KEY = "ReplaceYourGoogleAPI";
   const RANGE = "B:D";
 
   // データ取得
@@ -139,6 +139,7 @@ function WordApp({
 }
 
 export default WordApp;
+
 
 
 
